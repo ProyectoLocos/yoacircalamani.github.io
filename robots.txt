@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yoacircalamani.github.io/sitemap.xml

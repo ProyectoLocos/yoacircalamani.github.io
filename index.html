@@ -1,0 +1,713 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Yoacir Jesús Calamani Barrientos - Candidato a Alcalde de El Alto por Unidad Nacional. Plan: Seguridad, Empleo, Infraestructura. El Alto Seguro y Productivo.">
+    <meta name="keywords" content="Yoacir Calamani, Alcalde El Alto, Unidad Nacional, El Alto Bolivia, Elecciones 2025">
+    <title>Yoacir Calamani - Alcalde El Alto | Unidad Nacional</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Yoacir Calamani - Alcalde de El Alto">
+    <meta property="og:description" content="El Alto Seguro y Productivo">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Meta Pixel -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Politician","name":"Yoacir Calamani","jobTitle":"Candidato a Alcalde","affiliation":{"@type":"Organization","name":"Unidad Nacional"},"url":"https://yoacircalamani.github.io","image":"https://via.placeholder.com/500x600/1E3A8A/F7B500?text=YOACIR+CALAMANI","description":"Candidato a Alcalde de El Alto por Unidad Nacional. Plan: Seguridad, Empleo, Infraestructura."}</script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-text">YOACIR CALAMANI</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#biografia">Yoacir</a></li>
+                <li><a href="#plan">Plan de Gobierno</a></li>
+                <li><a href="#propuestas">Propuestas</a></li>
+                <li><a href="#unete" class="btn-unete">Únete</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>
+                    Recuperemos <span class="hero-highlight">El Alto</span>
+                </h1>
+                <p class="hero-slogan">Seguridad, Orden y Trabajo</p>
+                <p class="hero-description">
+                    Es momento de devolver la dignidad a nuestra ciudad. Con experiencia y mano firme, construiremos un
+                    El Alto seguro y productivo.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#plan" class="btn btn-primary">
+                        <i class="fas fa-file-alt"></i> Ver Plan de Gobierno
+                    </a>
+                    <a href="#unete" class="btn btn-primary">
+                        <i class="fas fa-users"></i> Súmate al Cambio
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="yoacir.jpg" alt="Yoacir Calamani" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="countdown">
+        <h3><i class="fas fa-calendar-alt"></i> Faltan para recuperar El Alto</h3>
+        <div class="countdown-timer">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">--</span>
+                <span class="countdown-label">Días</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">--</span>
+                <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">--</span>
+                <span class="countdown-label">Minutos</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilares -->
+    <section class="pilares">
+        <h2 class="section-title">Nuestros 3 Pilares Fundamentales</h2>
+        <div class="pilares-grid">
+            <div class="pilar-card">
+                <div class="pilar-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Seguridad Ciudadana</h3>
+                <p><strong>Programa "Cero Inseguridad"</strong></p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Estaciones Policiales Móviles</li>
+                    <li><i class="fas fa-check"></i> Iluminación LED Total</li>
+                    <li><i class="fas fa-check"></i> Control de Bares y Cantinas</li>
+                    <li><i class="fas fa-check"></i> Guardia Municipal Fortalecida</li>
+                </ul>
+            </div>
+
+            <div class="pilar-card">
+                <div class="pilar-icon"><i class="fas fa-road"></i></div>
+                <h3>Infraestructura Vial</h3>
+                <p><strong>Programa "Cero Baches"</strong></p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Mantenimiento Permanente</li>
+                    <li><i class="fas fa-check"></i> Gran Distribuidor Vial La Ceja</li>
+                    <li><i class="fas fa-check"></i> Rehabilitación de Avenidas</li>
+                    <li><i class="fas fa-check"></i> Transporte Ordenado</li>
+                </ul>
+            </div>
+
+            <div class="pilar-card">
+                <div class="pilar-icon"><i class="fas fa-briefcase"></i></div>
+                <h3>Empleo y Producción</h3>
+                <p><strong>Programa "El Alto Produce"</strong></p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Escuelas de Oficios</li>
+                    <li><i class="fas fa-check"></i> Fondo de Emprendimiento</li>
+                    <li><i class="fas fa-check"></i> Centros Productivos Distritales</li>
+                    <li><i class="fas fa-check"></i> Compras a Productores Locales</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biografia -->
+    <section class="pilares" id="biografia">
+        <h2 class="section-title">Yoacir Calamani: Un Hijo de El Alto</h2>
+        <div class="hero-container">
+            <div>
+                <img src="yoacir.jpg" alt="Yoacir Calamani" class="bio-image" loading="lazy">
+            </div>
+            <div>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                    Nacido el 26 de diciembre de 1979 en la zona 16 de Julio, Yoacir es un alteño de corazón que ha
+                    dedicado su vida al servicio de su ciudad.
+                </p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 0.5rem 0;"><i class="fas fa-graduation-cap"
+                            style="color: #F7B500; margin-right: 10px;"></i> Licenciado en Historia (UPEA)</li>
+                    <li style="padding: 0.5rem 0;"><i class="fas fa-users"
+                            style="color: #F7B500; margin-right: 10px;"></i> 25+ años de liderazgo sindical</li>
+                    <li style="padding: 0.5rem 0;"><i class="fas fa-building"
+                            style="color: #F7B500; margin-right: 10px;"></i> Subalcalde Distrito 12 (2018-2021)</li>
+                    <li style="padding: 0.5rem 0;"><i class="fas fa-chalkboard-teacher"
+                            style="color: #F7B500; margin-right: 10px;"></i> Docente UPEA</li>
+                </ul>
+                <p style="font-size: 1.1rem; margin-top: 1.5rem;">
+                    Su trayectoria refleja compromiso con el trabajo, la organización social y la defensa de los
+                    intereses del pueblo alteño.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIí“N PLAN DE GOBIERNO COMPLETO -->
+    <!-- Insertar este código en el index.html después de la sección de biografía -->
+
+    <section class="plan-gobierno" id="plan">
+        <div class="plan-container">
+            <h2 class="section-title">Plan de Gobierno: El Alto Seguro y Productivo</h2>
+
+            <div class="plan-intro">
+                <h3>12 Ejes para Transformar El Alto en Metrópoli</h3>
+                <p style="font-size: 1.1rem; margin-top: 1rem;">
+                    Un plan integral, realista y humano que coloca a la persona en el centro de la política pública.
+                    Haz clic en cada eje para conocer las propuestas detalladas.
+                </p>
+            </div>
+
+            <div class="accordion">
+                <!-- EJE 1: SEGURIDAD -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>
+                            <span class="accordion-icon"><i class="fas fa-shield-alt"></i></span>
+                            1. Seguridad Ciudadana - "Cero Inseguridad"
+                        </h4>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>La seguridad es la principal preocupación de las familias alteñas.</strong> La
+                                inseguridad ha crecido de manera sostenida, afectando el comercio, la movilidad y la
+                                convivencia.</p>
+
+                            <h5>Programas y Proyectos:</h5>
+                            <ul>
+                                <li><strong>Estaciones Policiales Móviles Municipales:</strong> Módulos móviles en
+                                    zonas de alta incidencia delictiva con atención inmediata y coordinación con la
+                                    Policía Boliviana.</li>
+                                <li><strong>Iluminación Total y Corredores Seguros:</strong> Instalación de luminarias
+                                    LED en avenidas, plazas, paradas y áreas comerciales.</li>
+                                <li><strong>Regulación Estricta de Bares y Cantinas:</strong> Horarios definidos,
+                                    controles permanentes y sanciones progresivas para locales reincidentes.</li>
+                                <li><strong>Fortalecimiento de la Guardia Municipal:</strong> Capacitación,
+                                    equipamiento y patrullaje preventivo con enfoque de proximidad ciudadana.</li>
+                                <li><strong>Seguridad Comunitaria Organizada:</strong> Redes vecinales, alarmas
+                                    comunitarias y canales digitales de denuncia.</li>
+                            </ul>
+
+                            <p style="margin-top: 1rem; font-style: italic; color: #1E3A8A;">
+                                <strong>"La seguridad es un derecho. Recuperar la tranquilidad es recuperar la
+                                    ciudad."</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EJE 2: INFRAESTRUCTURA VIAL -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>
+                            <span class="accordion-icon"><i class="fas fa-road"></i></span>
+                            2. Infraestructura Vial - "Cero Baches"
+                        </h4>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>El deterioro de calles y avenidas afecta el transporte, el comercio y la
+                                    economía familiar.</strong> Se requiere intervención estructural, no parches
+                                temporales.</p>
+
+                            <h5>Programas y Proyectos:</h5>
+                            <ul>
+                                <li><strong>Plan Permanente de Mantenimiento Vial:</strong> Intervención continua con
+                                    cronograma público, priorizando vías troncales y comerciales. En el primer año:
+                                    cero baches.</li>
+                                <li><strong>Gran Distribuidor Vial de la Ceja:</strong> Infraestructura estratégica
+                                    para descongestionar el tráfico que genera 400,000 pasajeros/día. Unirá norte y
+                                    sur con accesos a la autopista.</li>
+                                <li><strong>Rehabilitación Integral de Avenidas:</strong> Renovación de capa
+                                    asfáltica, señalización, drenaje pluvial y aceras inclusivas.</li>
+                                <li><strong>Movilidad Segura y Transporte Ordenado:</strong> Reordenamiento de paradas,
+                                    rutas y circulación para reducir congestionamientos.</li>
+                            </ul>
+
+                            <p style="margin-top: 1rem;">
+                                <strong>Dato clave:</strong> 5,000 choferes y 20 sindicatos operan diariamente entre El
+                                Alto y La Paz, generando caos vehicular insostenible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EJE 3: EMPLEO -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>
+                            <span class="accordion-icon"><i class="fas fa-briefcase"></i></span>
+                            3. Empleo y Juventud - "El Alto Produce y Emplea"
+                        </h4>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>El desempleo juvenil llegó a 14.2% en 2020.</strong> El Alto necesita políticas
+                                que potencien su economía popular y generen empleo digno.</p>
+
+                            <h5>Programas y Proyectos:</h5>
+                            <ul>
+                                <li><strong>Escuelas Municipales de Oficios:</strong> Capacitación técnica en oficios
+                                    demandados, implementadas en los CRPs equipados de la ciudad.</li>
+                                <li><strong>Fondo Municipal de Emprendimiento:</strong> Créditos semilla y asistencia
+                                    técnica para pequeños productores y comerciantes.</li>
+                                <li><strong>Centros de Desarrollo Productivo Distrital:</strong> Espacios de formación,
+                                    asesoría y comercialización por distrito.</li>
+                                <li><strong>Compras Municipales a Productores Locales:</strong> Prioridad a la
+                                    producción alteña en adquisiciones municipales.</li>
+                            </ul>
+
+                            <p style="margin-top: 1rem; font-style: italic; color: #1E3A8A;">
+                                <strong>"El empleo es dignidad y futuro."</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EJE 4: SALUD -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>
+                            <span class="accordion-icon"><i class="fas fa-heartbeat"></i></span>
+                            4. Salud Pública - "Salud Digna y Cercana"
+                        </h4>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>El Alto cuenta con 121 camas de hospitalización por 10,000 habitantes en primer
+                                    nivel, cifra insuficiente.</strong> La demanda crece mientras la infraestructura no
+                                aumenta al mismo ritmo.</p>
+
+                            <h5>Programas y Proyectos:</h5>
+                            <ul>
+                                <li><strong>Fortalecimiento de Centros de Salud:</strong> Ampliación de
+                                    infraestructura, equipamiento médico y mejora de condiciones laborales del
+                                    personal.</li>
+                                <li><strong>Programa Municipal de Salud Preventiva:</strong> Campañas permanentes,
+                                    controles médicos zonales con brigadas en zonas periurbanas.</li>
+                                <li><strong>Red Municipal Materno Infantil:</strong> Atención integral a mujeres
+                                    gestantes, niñas y niños.</li>
+                                <li><strong>Sistema de Referencia Oportuna:</strong> Coordinación entre niveles de
+                                    atención para reducir tiempos de espera.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EJE 5: EDUCACIí“N -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>
+                            <span class="accordion-icon"><i class="fas fa-graduation-cap"></i></span>
+                            5. Educación - "Educar para Progresar"
+                        </h4>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>Bolivia alcanzó 97.3% de cobertura en primaria (2022),</strong> pero persisten
+                                retos en calidad y equidad. Miles de estudiantes estudian con infraestructura
+                                deteriorada.</p>
+
+                            <h5>Programas y Proyectos:</h5>
+                            <ul>
+                                <li><strong>Plan de Infraestructura Educativa Digna:</strong> Mantenimiento, ampliación
+                                    y equipamiento de unidades educativas priorizadas.</li>
+                                <li><strong>Escuelas Municipales de Apoyo Educativo:</strong> Refuerzo escolar,
+                                    inteligencia artificial y tecnología educativa en CRPs.</li>
+                                <li><strong>Programa de Alimentación Escolar Fortalecido:</strong> Mejora nutricional y
+                                    transparencia en el desayuno escolar.</li>
+                                <li><strong>Formación Técnica Complementaria:</strong> Vinculación entre educación y
+                                    empleabilidad para jóvenes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EJE 6: ORDEN URBANO -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>
+                            <span class="accordion-icon"><i class="fas fa-city"></i></span>
+                            6. Orden Urbano - "La Ceja para Todos"
+                        </h4>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>Por La Ceja transitan más de 100,000 personas al día.</strong> Es el corazón
+                                económico pero también el espacio del desorden, inseguridad y congestión.</p>
+
+                            <h5>Programas y Proyectos:</h5>
+                            <ul>
+                                <li><strong>Reordenamiento Integral del Comercio Popular:</strong> Zonificación clara,
+                                    espacios definidos y acuerdos con sectores gremiales.</li>
+                                <li><strong>Iluminación Total y Espacios Seguros:</strong> Recuperación de plazas,
+                                    paradas y corredores peatonales.</li>
+                                <li><strong>Gran Distribuidor Vial de la Ceja:</strong> Infraestructura para
+                                    descongestionar el tránsito vehicular.</li>
+                                <li><strong>Gestión Integral del Espacio Público:</strong> Control permanente,
+                                    limpieza y mantenimiento urbano.</li>
+                            </ul>
+
+                            <p style="margin-top: 1rem; font-style: italic; color: #1E3A8A;">
+                                <strong>"Ordenar la Ceja es ordenar la ciudad."</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EJE 7: MEDIO AMBIENTE -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>
+                            <span class="accordion-icon"><i class="fas fa-leaf"></i></span>
+                            7. Medio Ambiente - "El Alto Limpio y Sostenible"
+                        </h4>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>La gestión inadecuada de residuos es un problema de salud pública.</strong> Se
+                                requiere un sistema integral, sostenible y participativo.</p>
+
+                            <h5>Programas y Proyectos:</h5>
+                            <ul>
+                                <li><strong>Sistema Integral de Gestión de Residuos:</strong> Mejora del recojo,
+                                    transporte y disposición final con tecnología moderna.</li>
+                                <li><strong>Plantas Municipales de Reciclaje:</strong> Promoción del reciclaje con
+                                    participación de asociaciones y economía circular.</li>
+                                <li><strong>Programa Barrios Limpios:</strong> Educación ambiental comunitaria,
+                                    incentivos vecinales y sanciones a infractores.</li>
+                                <li><strong>Protección de Ríos:</strong> Limpieza, control de vertidos y recuperación
+                                    ambiental de espacios naturales.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EJE 8: ORDENAMIENTO TERRITORIAL -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>
+                            <span class="accordion-icon"><i class="fas fa-map-marked-alt"></i></span>
+                            8. Ordenamiento Territorial - "Ciudad Ordenada"
+                        </h4>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>85% de las urbanizaciones no cuentan con planimetrías regularizadas.</strong>
+                                Esto genera inseguridad jurídica y frena el desarrollo.</p>
+
+                            <h5>Programas y Proyectos:</h5>
+                            <ul>
+                                <li><strong>Regularización Urbana Masiva:</strong> Programa municipal de
+                                    regularización de planimetrías y resoluciones administrativas con plazos claros.
+                                </li>
+                                <li><strong>Seguridad Jurídica Propietaria:</strong> Documentación que permite
+                                    construir en altura, heredar, acceder a créditos y formalizar negocios.</li>
+                                <li><strong>Comisiones de Urbanismo:</strong> Coordinación con colegios profesionales,
+                                    universidades y juntas vecinales para criterios técnicos unificados.</li>
+                                <li><strong>Alcaldía Facilitadora:</strong> Menos burocracia, atención eficiente,
+                                    transparencia total y trámites digitalizados.</li>
+                                <li><strong>Normativa Urbana Actualizada:</strong> Modernización del USPA para
+                                    crecimiento planificado y en altura.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EJE 9: IGUALDAD DE Gí‰NERO -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>
+                            <span class="accordion-icon"><i class="fas fa-venus-mars"></i></span>
+                            9. Igualdad de Género - "El Alto Inclusivo"
+                        </h4>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>Bolivia tiene el índice más alto de violencia contra mujeres en la región
+                                    (74.7%).</strong> La brecha salarial y laboral persiste.</p>
+
+                            <h5>Programas y Proyectos:</h5>
+                            <ul>
+                                <li><strong>Centros de Atención Integral a la Mujer:</strong> Prevención y atención
+                                    de violencia con servicios legales, psicológicos y sociales.</li>
+                                <li><strong>Protección a la Niñez y Adolescencia:</strong> Prevención del abandono,
+                                    trabajo infantil y violencia.</li>
+                                <li><strong>Atención al Adulto Mayor:</strong> Espacios de cuidado, recreación y
+                                    atención prioritaria.</li>
+                                <li><strong>Inclusión de Personas con Discapacidad:</strong> Accesibilidad urbana y
+                                    programas de inserción laboral.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EJE 10: CULTURA Y DEPORTE -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>
+                            <span class="accordion-icon"><i class="fas fa-theater-masks"></i></span>
+                            10. Cultura y Deporte - "Orgullo Alteño"
+                        </h4>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>El Alto tiene identidad cultural poderosa</strong> forjada en migración, trabajo
+                                colectivo y organización social que debe ser fortalecida.</p>
+
+                            <h5>Programas y Proyectos:</h5>
+                            <ul>
+                                <li><strong>Red Municipal de Centros Culturales:</strong> Espacios zonales equipados
+                                    para formación artística, música, danza y teatro.</li>
+                                <li><strong>Apoyo al Artista Alteño:</strong> Fondos concursables, ferias culturales y
+                                    visibilización del talento local.</li>
+                                <li><strong>Escuelas Deportivas Municipales:</strong> Formación gratuita para niñas,
+                                    niños y jóvenes en disciplinas prioritarias.</li>
+                                <li><strong>Recuperación de Canchas y Espacios Deportivos:</strong> Infraestructura
+                                    segura y accesible para deporte barrial.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EJE 11: GOBIERNO DIGITAL -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>
+                            <span class="accordion-icon"><i class="fas fa-laptop-code"></i></span>
+                            11. Gobierno Digital - "Municipio Moderno"
+                        </h4>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>La burocracia y falta de transparencia afectan la confianza ciudadana.</strong>
+                                El Alto necesita un municipio ágil, cercano y tecnológicamente moderno.</p>
+
+                            <h5>Programas y Proyectos:</h5>
+                            <ul>
+                                <li><strong>Plataforma Digital Municipal Única:</strong> Trámites en línea,
+                                    seguimiento digital y reducción de tiempos de atención.</li>
+                                <li><strong>Gobierno Abierto y Transparente:</strong> Publicación de presupuestos,
+                                    contratos y obras en tiempo real.</li>
+                                <li><strong>Digitalización del Catastro:</strong> Mejor planificación y control urbano
+                                    con tecnología moderna.</li>
+                                <li><strong>Innovación y Datos Abiertos:</strong> Uso de datos para mejorar políticas
+                                    públicas y decisiones municipales.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EJE 12: GESTIí“N DE RIESGOS -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>
+                            <span class="accordion-icon"><i class="fas fa-exclamation-triangle"></i></span>
+                            12. Gestión de Riesgos - "El Alto Previene"
+                        </h4>
+                        <span class="accordion-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>El Alto es vulnerable a riesgos climáticos como inundaciones y
+                                    granizadas.</strong> La prevención debe ser técnica y participativa.</p>
+
+                            <h5>Programas y Proyectos:</h5>
+                            <ul>
+                                <li><strong>Plan Municipal de Gestión Integral de Riesgos:</strong> Identificación de
+                                    zonas vulnerables y planes de contingencia.</li>
+                                <li><strong>Infraestructura de Drenaje:</strong> Obras preventivas en puntos críticos
+                                    para evitar inundaciones.</li>
+                                <li><strong>Brigadas Comunitarias de Prevención:</strong> Capacitación vecinal en
+                                    respuesta temprana a emergencias.</li>
+                                <li><strong>Adaptación al Cambio Climático:</strong> íreas verdes y manejo
+                                    responsable del agua.</li>
+                            </ul>
+
+                            <p style="margin-top: 1rem; font-style: italic; color: #1E3A8A;">
+                                <strong>"Prevenir es proteger la vida y el patrimonio."</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón Descargar Plan -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">
+                    <i class="fas fa-download"></i> Descargar Plan Completo en PDF
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonios">
+        <h2 class="section-title" style="color: white;">Lo que dicen los vecinos</h2>
+        <div class="testimonio-card">
+            <p class="testimonio-text">
+                "Cuando Yoacir fue Subalcalde en nuestro distrito, vimos cambios reales. Las calles mejoraron, había
+                seguridad y nos escuchaba. Es el único que puede devolver el orden a El Alto."
+            </p>
+            <div class="testimonio-author">
+                <div class="testimonio-avatar">M</div>
+                <div>
+                    <h5>María Quispe</h5>
+                    <p class="testimonio-role">Comerciante - Distrito 12</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonio-card">
+            <p class="testimonio-text">
+                "Necesitamos alguien que conozca El Alto de verdad, no improvisados. Yoacir nació aquí, trabajó
+                aquí, conoce nuestros problemas. Con él tenemos futuro."
+            </p>
+            <div class="testimonio-author">
+                <div class="testimonio-avatar">J</div>
+                <div>
+                    <h5>Juan Mamani</h5>
+                    <p class="testimonio-role">Transportista - Ceja El Alto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa Propuestas -->
+    <section class="mapa-propuestas" id="propuestas">
+        <h2 class="section-title">Propuestas por Distrito</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+            Haz clic en tu distrito para ver las propuestas específicas
+        </p>
+        <div id="map"></div>
+    </section>
+
+    <!-- Únete -->
+    <section class="unete" id="unete">
+        <h2>¡Súmate al Movimiento!</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+            El Alto necesita tu apoyo. Juntos recuperaremos nuestra ciudad.
+        </p>
+        <div class="unete-options">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7GpMS5KREhmsfigZ3N461JLJ5YDc50SFrR85i-HGEpcMU_A/viewform"
+                target="_blank" class="unete-option">
+                <i class="fas fa-clipboard-check"></i>
+                <h4>Ser Voluntario</h4>
+            </a>
+            <a href="https://wa.me/59160655860" target="_blank" class="unete-option">
+                <i class="fab fa-whatsapp"></i>
+                <h4>Contactar</h4>
+            </a>
+            <a href="https://www.facebook.com/yoacir.calamani" target="_blank" class="unete-option">
+                <i class="fab fa-facebook"></i>
+                <h4>Seguirnos</h4>
+            </a>
+            <a href="#donaciones" class="unete-option">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h4>Donar</h4>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Yoacir Calamani</h4>
+                <p>Candidato a Alcalde de El Alto<br>Unidad Nacional</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/yoacir.calamani" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@yoacir1calamani" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/59160655860" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-phone"></i> +591 60655860</p>
+                <p><i class="fas fa-map-marker-alt"></i> El Alto, La Paz, Bolivia</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="#biografia">Biografía</a></li>
+                    <li><a href="#plan">Plan de Gobierno</a></li>
+                    <li><a href="#unete">Únete</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p>&copy; 2025 Yoacir Calamani - Unidad Nacional. El Alto Seguro y Productivo.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/59160655860?text=Hola%20Yoacir,%20quiero%20apoyarte" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
