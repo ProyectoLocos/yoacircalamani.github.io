@@ -355,6 +355,40 @@ h3 {
     padding: 4rem 2rem;
     background: var(--azul-un);
     color: var(--blanco);
+    overflow: hidden;
+}
+
+/* Carousel Container */
+.testimonios-carousel-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    position: relative;
+}
+
+/* Carousel Track */
+.testimonios-carousel-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll-testimonios 40s linear infinite;
+    width: fit-content;
+}
+
+/* Pause animation on hover */
+.testimonios-carousel-track:hover {
+    animation-play-state: paused;
+}
+
+/* Keyframes for infinite scroll */
+@keyframes scroll-testimonios {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% / 2 - 1rem));
+    }
 }
 
 .testimonio-card {
@@ -362,14 +396,23 @@ h3 {
     color: var(--azul-oscuro);
     padding: 2rem;
     border-radius: 15px;
-    max-width: 800px;
-    margin: 2rem auto;
+    min-width: 600px;
+    max-width: 600px;
+    flex-shrink: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .testimonio-text {
     font-size: 1.2rem;
     font-style: italic;
     margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .testimonio-author {
@@ -389,6 +432,7 @@ h3 {
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--azul-un);
+    flex-shrink: 0;
 }
 
 /* Únete */
@@ -526,5 +570,15 @@ h3 {
 
     .hero h1 {
         font-size: 2rem;
+    }
+
+    /* Carousel responsive adjustments */
+    .testimonio-card {
+        min-width: 90vw;
+        max-width: 90vw;
+    }
+
+    .testimonios-carousel-track {
+        animation: scroll-testimonios 30s linear infinite;
     }
 }
